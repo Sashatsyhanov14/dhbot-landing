@@ -1,0 +1,13 @@
+{
+  "name": "dhbot-landing",
+  "version": "1.0.0",
+  "description": "DHBOT Landing Page with Telegram Lead Integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
