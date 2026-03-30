@@ -78,10 +78,25 @@
           }
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
         body {
             background-color: #0c0e10;
             color: #e0e6ed;
             font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link.active {
+            color: #b5cad4;
+            font-weight: 600;
+            border-bottom: 2px solid #b5cad4;
+            padding-bottom: 4px;
         }
         .architectural-grid {
             background-image: 
@@ -111,11 +126,11 @@
             <img alt="DHBOT Logo" class="h-8 w-auto" src="logo.jpg"/>
             <span class="text-xl font-bold tracking-tighter text-[#b5cad4] uppercase">DHBOT</span>
         </div>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#">Возможности</a>
-            <a class="text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#comparison">Эффективность</a>
-            <a class="text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#how-it-works">Как это работает</a>
-            <a class="text-[#b5cad4] font-semibold border-b border-[#b5cad4] pb-1 transition-colors" href="#pricing">Тарифы</a>
+        <div class="hidden md:flex items-center gap-8" id="nav-links">
+            <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#hero">Возможности</a>
+            <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#comparison">Эффективность</a>
+            <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#how-it-works">Как это работает</a>
+            <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#pricing">Тарифы</a>
         </div>
         <button onclick="openModal()" class="bg-primary text-on-primary px-6 py-2.5 text-sm font-semibold rounded-sm hover:opacity-90 active:scale-95 transition-all">
             Оставить заявку
@@ -137,7 +152,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="min-h-[calc(100vh-80px)] flex items-center" data-aos="fade-up">
+    <section id="hero" class="min-h-[calc(100vh-80px)] flex items-center" data-aos="fade-up">
         <div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Column: Content -->
             <div class="lg:col-span-6 space-y-8">
@@ -776,6 +791,28 @@
     // Close modal on escape key
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
+    });
+
+    // Handle Active Nav Links on Scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
     });
 
     // Initialize AOS
