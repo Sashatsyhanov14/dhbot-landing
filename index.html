@@ -84,6 +84,17 @@
         section {
             scroll-margin-top: 80px;
         }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
         body {
             background-color: #0c0e10;
             color: #e0e6ed;
@@ -97,6 +108,12 @@
             font-weight: 600;
             border-bottom: 2px solid #b5cad4;
             padding-bottom: 4px;
+        }
+        #mobile-menu-overlay {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobile-menu-overlay.hidden-menu {
+            transform: translateX(100%);
         }
         .architectural-grid {
             background-image: 
@@ -121,22 +138,53 @@
 
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-[#0c0e10]/80 backdrop-blur-xl border-b border-[#ffffff]/5">
-    <div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto font-['Manrope'] antialiased tracking-tight">
-        <div class="flex items-center gap-2">
-            <img alt="DHBOT Logo" class="h-8 w-auto" src="logo.jpg"/>
-            <span class="text-xl font-bold tracking-tighter text-[#b5cad4] uppercase">DHBOT</span>
+    <div class="flex justify-between items-center px-4 md:px-8 py-4 max-w-full mx-auto font-['Manrope'] antialiased tracking-tight overflow-hidden">
+        <div class="flex items-center gap-2 flex-shrink-0">
+            <img alt="DHBOT Logo" class="h-6 md:h-7 w-auto" src="logo.jpg"/>
+            <span class="text-base md:text-lg font-bold tracking-tighter text-[#b5cad4] uppercase">DHBOT</span>
         </div>
+        <!-- Desktop Links -->
         <div class="hidden md:flex items-center gap-8" id="nav-links">
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#hero">Возможности</a>
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#comparison">Эффективность</a>
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#how-it-works">Как это работает</a>
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#pricing">Тарифы</a>
         </div>
-        <button onclick="openModal()" class="bg-primary text-on-primary px-6 py-2.5 text-sm font-semibold rounded-sm hover:opacity-90 active:scale-95 transition-all">
+        <div class="flex items-center gap-2 md:gap-4">
+            <button onclick="openModal()" class="bg-primary text-on-primary px-3 md:px-6 py-2 text-[10px] md:text-sm font-semibold rounded-sm hover:opacity-90 active:scale-95 transition-all whitespace-nowrap">
+                Оставить заявку
+            </button>
+            <!-- Hamburger Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-[#b5cad4] p-1 flex items-center justify-center">
+                <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[60] bg-[#0c0e10] hidden-menu md:hidden flex flex-col p-8 space-y-8">
+    <div class="flex justify-between items-center border-b border-white/5 pb-6">
+        <div class="flex items-center gap-2">
+            <img alt="DHBOT Logo" class="h-6 w-auto" src="logo.jpg"/>
+            <span class="text-lg font-bold tracking-tighter text-[#b5cad4] uppercase">DHBOT</span>
+        </div>
+        <button onclick="toggleMobileMenu()" class="text-[#b5cad4]">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+    </div>
+    <div class="flex flex-col space-y-6 text-xl font-headline font-semibold">
+        <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#hero">Возможности</a>
+        <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#comparison">Эффективность</a>
+        <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#how-it-works">Как это работает</a>
+        <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#pricing">Тарифы</a>
+    </div>
+    <div class="pt-8 border-t border-white/5">
+        <button onclick="toggleMenuAndOpenModal()" class="w-full bg-primary text-on-primary py-4 font-bold rounded-sm text-sm uppercase tracking-widest">
             Оставить заявку
         </button>
     </div>
-</nav>
+</div>
 
 <main class="relative min-h-screen pt-20 overflow-hidden">
     <!-- Background Elements -->
@@ -156,14 +204,14 @@
         <div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Column: Content -->
             <div class="lg:col-span-6 space-y-8">
-                <div class="space-y-2">
+                <div class="space-y-4">
                     <p class="text-primary/60 font-label text-[10px] uppercase tracking-[0.4em] font-bold">Dhbot (dealHunter bot)</p>
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20">
                         <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(181,202,212,0.5)]"></span>
                         <span class="text-[10px] font-bold tracking-widest uppercase text-primary">AI Автоматизация Активна</span>
                     </div>
                 </div>
-                <h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
+                <h1 class="text-3xl sm:text-4xl lg:text-7xl font-headline font-extrabold text-white leading-[1.2] lg:leading-[1.1] tracking-tight">
                     Захват лидов 24/7 и значительное снижение затрат на менеджмент.
                 </h1>
                 <p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-xl">
@@ -730,6 +778,21 @@
         document.getElementById('modal-form').classList.remove('hidden');
         document.getElementById('modal-status').classList.add('hidden');
         document.getElementById('submit-btn').classList.remove('hidden');
+    }
+
+    function toggleMobileMenu() {
+        const overlay = document.getElementById('mobile-menu-overlay');
+        overlay.classList.toggle('hidden-menu');
+        if (overlay.classList.contains('hidden-menu')) {
+            document.body.style.overflow = '';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function toggleMenuAndOpenModal() {
+        toggleMobileMenu();
+        setTimeout(openModal, 400); // Wait for menu to slide out
     }
     
     function closeModal() {
