@@ -141,15 +141,18 @@
         <div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <!-- Left Column: Content -->
             <div class="lg:col-span-6 space-y-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20">
-                    <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(181,202,212,0.5)]"></span>
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-primary">AI Автоматизация Активна</span>
+                <div class="space-y-2">
+                    <p class="text-primary/60 font-label text-[10px] uppercase tracking-[0.4em] font-bold">Dhbot (dealHunter bot)</p>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/20">
+                        <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(181,202,212,0.5)]"></span>
+                        <span class="text-[10px] font-bold tracking-widest uppercase text-primary">AI Автоматизация Активна</span>
+                    </div>
                 </div>
                 <h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tight">
                     Захват лидов 24/7 и значительное снижение затрат на менеджмент.
                 </h1>
                 <p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-xl">
-                    AI-агент для агентств недвижимости: отвечает за 1 секунду, квалифицирует клиентов и передает только «горячие» лиды прямо вам.
+                    AI-агент для агентств недвижимости: отвечает за 3 секунды, квалифицирует клиентов и передает только «горячие» лиды прямо вам.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-4">
                     <button onclick="openModal()" class="bg-surface-container-highest border border-primary/40 text-white px-8 py-4 font-semibold rounded-sm hover:bg-surface-container-high active:scale-95 transition-all flex items-center gap-2 group">
@@ -312,7 +315,7 @@
                         <li class="flex items-start gap-4">
                             <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">bolt</span>
                             <div>
-                                <p class="text-lg font-medium text-white">Отвечает за 1 секунду</p>
+                                <p class="text-lg font-medium text-white">Отвечает за 3 секунды</p>
                                 <p class="text-sm text-on-surface-variant mt-1">Мгновенная реакция удерживает интерес клиента</p>
                             </div>
                         </li>
@@ -400,7 +403,7 @@
                     <div class="space-y-4">
                         <h3 class="text-2xl font-headline font-bold text-white tracking-tight">Вы получаете горячий лид</h3>
                         <p class="text-on-surface-variant font-body leading-relaxed">
-                            Вся информация передается вашему менеджеру за <span class="text-primary font-bold">1 секунду</span>. Максимальная точность и готовность к сделке.
+                            Вся информация передается вашему менеджеру за <span class="text-primary font-bold">3 секунды</span>. Максимальная точность и готовность к сделке.
                         </p>
                     </div>
                 </div>
@@ -408,8 +411,29 @@
 
             <!-- Dashboard CTA Section -->
             <div class="mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 bg-surface-container-high p-1 lg:p-2 rounded-sm shadow-2xl">
-                    <img alt="Dashboard" class="w-full aspect-video object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqkBZA5gaI4HP2IP03rXf1v1iZ9-HEHPDP4qcUjNY9F_UtzkRXY6bHlD512XnKA-_xqG3y-67WzwKd6-AU9gaIOF5sNgWkxeDfnUEQLUMpoPIe-ItD7OziNkACJV6TC1saR9Yl8ncjbwvmpsY8qDfjQg1kQPZwC8kVTW4xP81Kpk-N7wBtRzGZPtso1XehS73Y6X01_BotaPga5ewxaoF1VgYY2tEAMNCgkhsKMsrgPIfvmuzq-sbChvpY_Oml7nYHurD-zDm6iB6"/>
+                <div class="lg:col-span-7">
+                    <div class="bg-surface-container-high/40 backdrop-blur-xl border border-outline-variant/10 rounded-sm p-8 md:p-12 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[60px] rounded-full"></div>
+                        <h3 class="text-3xl font-headline font-bold text-white mb-8 tracking-tighter uppercase">Интеллект DHBOT</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1">bolt</span>
+                                <p class="text-on-surface-variant leading-relaxed"><span class="text-white font-bold">Ответ за 3 секунды</span> — бот подхватывает диалог мгновенно, не давая клиенту переключиться.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1">battery_charging_full</span>
+                                <p class="text-on-surface-variant leading-relaxed"><span class="text-white font-bold">Нулевая усталость</span> — работа 24/7 без праздников, обедов и потери концентрации.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1">fact_check</span>
+                                <p class="text-on-surface-variant leading-relaxed"><span class="text-white font-bold">Точная квалификация</span> — вы получаете анкету с бюджетом и районом, а не просто номер.</p>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary mt-1">trending_up</span>
+                                <p class="text-on-surface-variant leading-relaxed"><span class="text-white font-bold">Экономия x5</span> — содержание бота в разы ниже самой скромной зарплаты менеджера.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="lg:col-span-5 lg:pl-12">
                     <h3 class="text-3xl font-headline font-bold mb-6 text-white">Готовы масштабировать продажи?</h3>
@@ -449,15 +473,15 @@
                             <div class="mb-10">
                                 <h3 class="font-headline text-2xl font-bold text-white mb-6">Базовый</h3>
                                 <div class="space-y-1">
-                                    <div class="text-4xl font-headline font-extrabold text-white">40 000 ₽ <span class="text-sm font-medium text-outline">разово</span></div>
-                                    <div class="text-lg font-medium text-primary">Абонентская: 20 000 ₽/мес</div>
+                                    <div class="text-4xl font-headline font-extrabold text-white">35 000 ₽ <span class="text-sm font-medium text-outline">разово</span></div>
+                                    <div class="text-lg font-medium text-primary">Абонентская: 15 000 ₽/мес</div>
                                 </div>
                             </div>
                             <div class="flex-grow">
                                 <ul class="space-y-6 mb-12">
                                     <li class="flex items-start gap-4">
                                         <span class="material-symbols-outlined text-primary mt-1">settings_suggest</span>
-                                        <span class="text-on-surface-variant leading-relaxed">Настройка и запуск бота</span>
+                                        <span class="text-on-surface-variant leading-relaxed">Полная установка под вас</span>
                                     </li>
                                     <li class="flex items-start gap-4">
                                         <span class="material-symbols-outlined text-primary mt-1">cloud_upload</span>
@@ -516,7 +540,7 @@
             <div class="mt-32 max-w-4xl mx-auto">
                 <div class="bg-surface-container-low p-8 md:p-16 relative border-l-2 border-primary/20" data-aos="zoom-in">
                     <div class="text-primary-dim font-headline text-xl md:text-2xl italic leading-relaxed mb-8 text-center md:text-left">
-                        «Интеграция DHBOT сокращает время обработки первичных заявок на 85%, окупая стоимость внедрения уже в первый квартал эксплуатации.»
+                        «Интеграция DHBOT сокращает время обработки первичных заявок на 85%, окупая стоимость внедрения уже в первый Месяц эксплуатации.»
                     </div>
                     <div class="flex items-center justify-center md:justify-start gap-4">
                         <div class="w-12 h-12 bg-surface-container-highest rounded-sm flex items-center justify-center">
@@ -579,6 +603,7 @@
             </div>
             <p class="font-['Inter'] text-sm tracking-wide text-gray-500">
                 © 2026 DHBOT Precision Systems. Все права защищены.
+                <br/><span class="text-[10px] opacity-40 uppercase tracking-widest mt-1 block">dealHunter bot — точность в деталях</span>
             </p>
         </div>
         <!-- Right Side -->
