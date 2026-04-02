@@ -152,7 +152,7 @@
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#hero">Возможности</a>
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#comparison">Эффективность</a>
             <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#how-it-works">Как это работает</a>
-            <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#pricing">Тарифы</a>
+            <a class="nav-link text-[#b5cad4]/60 hover:text-[#b5cad4] transition-colors" href="#pricing">Решения</a>
         </div>
         <div class="flex items-center gap-2 md:gap-4">
             <button onclick="openModal(); trackEvent('header_cta_click')" class="bg-primary text-on-primary px-3 md:px-6 py-2 text-[10px] md:text-sm font-semibold rounded-sm hover:opacity-90 active:scale-95 transition-all whitespace-nowrap">
@@ -181,7 +181,7 @@
         <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#hero">Возможности</a>
         <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#comparison">Эффективность</a>
         <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#how-it-works">Как это работает</a>
-        <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#pricing">Тарифы</a>
+        <a onclick="toggleMobileMenu()" class="text-white/60 hover:text-white transition-colors" href="#pricing">Решения</a>
     </div>
     <div class="pt-8 border-t border-white/5">
         <button onclick="toggleMenuAndOpenModal(); trackEvent('mobile_menu_cta_click')" class="w-full bg-primary text-on-primary py-4 font-bold rounded-sm text-sm uppercase tracking-widest">
@@ -520,88 +520,89 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Solution Constructor Section -->
     <section id="pricing" class="py-24 px-8 relative overflow-hidden border-t border-outline-variant/10">
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Headline -->
             <div class="mb-16 md:mb-24" data-aos="fade-up">
-                <span class="text-[10px] text-primary uppercase tracking-[0.2em] font-label font-bold mb-4 block">Инвестиции в эффективность</span>
-                <h2 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter max-w-4xl text-white">
-                    Стоимость внедрения DHBOT
+                <span class="text-[10px] text-primary uppercase tracking-[0.2em] font-label font-bold mb-4 block">Варианты решений</span>
+                <h2 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter max-w-4xl text-white leading-[1.1]">
+                    🛠️ Конструктор вашего решения
                 </h2>
+                <p class="text-xl text-on-surface-variant mt-6 max-w-2xl font-body">
+                    Стоимость рассчитывается индивидуально под задачи вашего агентства
+                </p>
             </div>
             
-            <!-- Pricing Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                <!-- First Card: Базовый -->
-                <div class="relative group" data-aos="fade-right">
-                    <div class="h-full bg-surface-container-low p-8 md:p-12 border-l-2 border-primary transition-all duration-500 hover:bg-surface-container rounded-sm">
-                        <div class="flex flex-col h-full">
-                            <div class="mb-10">
-                                <h3 class="font-headline text-2xl font-bold text-white mb-6">Базовый</h3>
-                                <div class="space-y-1">
-                                    <div class="text-4xl font-headline font-extrabold text-white">35 000 ₽ <span class="text-sm font-medium text-outline">разово</span></div>
-                                    <div class="text-lg font-medium text-primary">Абонентская: 15 000 ₽/мес</div>
-                                </div>
-                            </div>
-                            <div class="flex-grow">
-                                <ul class="space-y-6 mb-12">
-                                    <li class="flex items-start gap-4">
-                                        <span class="material-symbols-outlined text-primary mt-1">settings_suggest</span>
-                                        <span class="text-on-surface-variant leading-relaxed">Полная установка под вас</span>
-                                    </li>
-                                    <li class="flex items-start gap-4">
-                                        <span class="material-symbols-outlined text-primary mt-1">cloud_upload</span>
-                                        <span class="text-on-surface-variant leading-relaxed">Загрузка базы объектов</span>
-                                    </li>
-                                    <li class="flex items-start gap-4">
-                                        <span class="material-symbols-outlined text-primary mt-1">hub</span>
-                                        <span class="text-on-surface-variant leading-relaxed">2 мессенджера: TG и Max</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <button onclick="openModal(); trackEvent('pricing_basic_click')" class="w-full py-4 bg-primary text-on-primary font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:opacity-90 active:scale-[0.98]">
-                                    Оставить заявку
-                                </button>
-                            </div>
-                        </div>
+            <!-- Constructor Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10 rounded-lg overflow-hidden border border-outline-variant/15 mb-20" data-aos="fade-up">
+                <!-- Card 1 -->
+                <div class="bg-surface-container-low p-10 hover:bg-surface-container transition-all duration-500 border-r border-b border-outline-variant/10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-symbols-outlined text-primary text-3xl">target</span>
+                        <h3 class="text-xl font-headline font-bold text-white uppercase tracking-tight">Лидогенерация</h3>
                     </div>
+                    <p class="text-on-surface-variant leading-relaxed">Поиск и автоматический захват горячих клиентов.</p>
                 </div>
-                
-                <!-- Second Card: Кастомный -->
-                <div class="relative group" data-aos="fade-left">
-                    <div class="h-full bg-surface-container-high p-8 md:p-12 border-l-2 border-secondary transition-all duration-500 hover:bg-surface-container-highest rounded-sm">
-                        <div class="flex flex-col h-full">
-                            <div class="mb-10">
-                                <h3 class="font-headline text-2xl font-bold text-white mb-6">Кастомный</h3>
-                                <div class="text-4xl font-headline font-extrabold text-white py-3">По запросу</div>
-                            </div>
-                            <div class="flex-grow">
-                                <ul class="space-y-6 mb-12">
-                                    <li class="flex items-start gap-4">
-                                        <span class="material-symbols-outlined text-secondary mt-1">architecture</span>
-                                        <span class="text-on-surface-variant leading-relaxed">Индивидуальные функции</span>
-                                    </li>
-                                    <li class="flex items-start gap-4">
-                                        <span class="material-symbols-outlined text-secondary mt-1">integration_instructions</span>
-                                        <span class="text-on-surface-variant leading-relaxed">Сложные интеграции</span>
-                                    </li>
-                                    <li class="flex items-start gap-4">
-                                        <span class="material-symbols-outlined text-secondary mt-1">auto_awesome</span>
-                                        <span class="text-on-surface-variant leading-relaxed">Персональный план</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <button onclick="openModal(); trackEvent('pricing_custom_click')" class="w-full py-4 bg-secondary-container text-on-secondary-container font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-secondary-container/80 active:scale-[0.98]">
-                                    Обсудить проект
-                                </button>
-                            </div>
-                        </div>
+                <!-- Card 2 -->
+                <div class="bg-surface-container-low p-10 hover:bg-surface-container transition-all duration-500 border-b border-outline-variant/10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-symbols-outlined text-primary text-3xl">forum</span>
+                        <h3 class="text-xl font-headline font-bold text-white uppercase tracking-tight">Автоответы 24/7</h3>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">Мгновенная реакция в <span class="text-white font-medium">Telegram</span> и <span class="text-white font-medium">MAX</span>.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-surface-container-low p-10 hover:bg-surface-container transition-all duration-500 border-r border-outline-variant/10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-symbols-outlined text-primary text-3xl">home_work</span>
+                        <h3 class="text-xl font-headline font-bold text-white uppercase tracking-tight">Показ квартир</h3>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">Автоматическая запись на просмотры и квалификация объектов.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-surface-container-low p-10 hover:bg-surface-container transition-all duration-500">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+                        <h3 class="text-xl font-headline font-bold text-white uppercase tracking-tight">Умные звонки</h3>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">Робот-ассистент для подтверждения заявок и обзвона базы.</p>
+                </div>
+            </div>
+
+            <!-- "Under the Key" Section -->
+            <div class="rounded-sm bg-surface-container-high/40 backdrop-blur-xl border border-outline-variant/10 p-12 relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full"></div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-12 mb-16">
+                    <div>
+                        <h3 class="text-3xl font-headline font-bold text-white mb-4 uppercase">📦 Полное внедрение «Под ключ»</h3>
+                        <p class="text-on-surface-variant">В каждый проект уже включено:</p>
+                    </div>
+                    <button onclick="openModal(); trackEvent('constructor_cta_click')" class="bg-primary text-on-primary px-10 py-5 font-headline font-extrabold text-lg rounded-sm hover:brightness-110 active:scale-95 transition-all shadow-2xl shadow-primary/10 whitespace-nowrap">
+                        Оставить заявку на расчет стоимости
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div class="space-y-4">
+                        <h4 class="text-white font-bold uppercase text-xs tracking-widest text-primary/80">01. Настройка базы</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Всё сохраняется, ничего не теряется.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-white font-bold uppercase text-xs tracking-widest text-primary/80">02. Интеграции</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Коннектим бота с вашими CRM, мессенджерами и сервисами.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-white font-bold uppercase text-xs tracking-widest text-primary/80">03. Технический «подгон»</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Установка, отладка скриптов и запуск в работу за 48 часов.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-white font-bold uppercase text-xs tracking-widest text-primary/80">04. Сопровождение</h4>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Мы не просто ставим бота, а выводим его на результат.</p>
                     </div>
                 </div>
             </div>
+
             
             <!-- Featured Insight Area -->
             <div class="mt-32 max-w-4xl mx-auto">
